@@ -1,0 +1,123 @@
+.box {
+    width: 700px;
+    height: 700px;
+    background-color: rgb(204, 205, 205);
+    opacity: 0.8;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 25px;
+}
+body{
+    height: 100vh;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.join{
+    font-size: 50px;
+    display: flex;
+    margin-bottom: 10px;
+}
+
+.line01{
+    width: 300px;
+    background-color: white;
+    height: 2px;
+    flex-direction: column;
+}
+
+.name{
+    color: white;
+    margin-right: 220px;
+    margin-top: 20px;
+}
+.nick{
+    color: white;
+    margin-right: 200px;
+    margin-top: 20px;
+}
+.email{
+    color: white;
+    margin-right: 200px;
+    margin-top: 20px;
+
+}
+.pwd{
+    color: white;
+    margin-right: 185px;
+    margin-top: 20px;
+}
+.passwordCheck{
+    color: white;
+    margin-right: 150px;
+    margin-top: 20px;
+}
+
+.hide{
+    display: none;
+}
+
+
+input {
+    height: 30px;
+    width: 250px;
+    font-size: 20px;
+    background-color: transparent;
+    color: white;
+    border: 2px solid white;
+    border-radius: 8px;
+    display: flex;
+
+    align-items: center;
+}   
+
+
+
+
+.join_button{
+    background-color: rgb(149, 149, 149);
+    border: none;
+    width: 250px;
+    height: 60px;
+    border-radius: 8px;
+    margin: 40px;
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+}
+.join_button:active{
+    background-color:  rgb(49, 49, 49);
+}
+
+
+
+#modal {
+    display: none;
+    background-color: rgba(0, 0, 0, 0.4);
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    text-align: center;
+  }
+  #modal_content {
+    background-color: rgb(255, 255, 255);
+    width: 300px;
+    position: absolute;
+    top: 20%;
+    left: 40%;
+    padding: 10px;
+    border-radius: 5px;
+  }
+  #close {
+    float: right;
+    background-color: white;
+    border-radius: 5px;
+    border: 1px solid black;
+  }
+  
