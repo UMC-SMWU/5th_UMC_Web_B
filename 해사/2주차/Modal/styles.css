@@ -1,0 +1,28 @@
+#modal-wrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#modal {
+  width: 350px;
+  padding: 24px 14px;
+  border-radius: 4px;
+  background-color: white;
+}
+
+#modal-title {
+  margin: 0;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+#close-wrapper {
+  text-align: right;
+}
