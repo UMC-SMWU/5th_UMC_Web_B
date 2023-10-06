@@ -1,6 +1,8 @@
 # Netfilx Clone Coding
 
-### Check List
+## 🌈 실습
+
+### ✅ Check List
 
 - [x] 프로젝트 진행할 때 필수적으로 있어야 할 파일은 무엇이라 생각하나요?
 
@@ -23,15 +25,40 @@
   - [x] 완성한 파일 export하기
   - [x] CSS로 꾸며주기
 
-<br>
-
 ### 실습 완성본
 
 ![image](https://github.com/haesa/React-basic/assets/34948133/a0abfe38-7799-450d-aba4-04818ca3c232)
 
 <br>
 
-### API 영화 데이터
+## 🔥 미션
+
+<aside>
+💡 영화 포스터에 마우스 올려놓았을 때, 영화의 상세 설명이 보이게 구현해봅시다!
+
+![sample](https://github.com/haesa/React-basic/assets/34948133/ffb1a60a-7660-4011-b7f4-074d0d94609a)
+
+</aside>
+
+### ✅ Check List
+
+- [x] 영화 상세 설명 컴포넌트 만들기
+
+  → 우선은 포스터 옆에 상세 설명 컴포넌트가 보여도 괜찮으니, 컴포넌트를 만들어주세요.
+
+- [x] 화면에서 상세 설명 컴포넌트가 보이지 않게 만들기
+
+  - [x] 마우스를 올렸을 때 컴포넌트가 보이게 만들기
+
+- [x] 포스터 위에 상세 설명이 보이도록 고정하기
+
+### 미션 완성본
+
+![movie-detail](https://github.com/haesa/React-basic/assets/34948133/a9950f79-2351-48c1-8f53-6fd4ebb9711a)
+
+<br>
+
+## API 영화 데이터
 
 ```jsx
 export const movies = {
