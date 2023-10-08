@@ -1,6 +1,7 @@
 const signUpBtn = document.getElementById("signUpBtn");
 const closeBtn = document.getElementById("closeBtn");
 const modal = document.querySelector(".modal-container");
+
 const [name, nickname, email, password, pwCheck] =
   document.getElementsByTagName("input");
 const [nameMsg, nicknameMsg, emailMsg, passwordMsg, pwCheckMsg] =
@@ -26,6 +27,7 @@ const vaildation = {
 };
 
 // 사용자가 폼 내에 입력을 할 때마다 체크
+// every method로
 document.signUpForm.onkeyup = () => {
   Object.values(vaildation).filter((v) => v === true).length === 5
     ? (signUpBtn.disabled = false)
