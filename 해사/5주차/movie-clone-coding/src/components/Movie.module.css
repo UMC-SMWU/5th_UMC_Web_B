@@ -1,6 +1,19 @@
-import styled from 'styled-components';
+/* reset */
 
-export const MovieItem = styled.div`
+html,
+body,
+section,
+div,
+p,
+img,
+span {
+  margin: 0;
+  padding: 0;
+}
+
+/* movie */
+
+.movie {
   position: relative;
   justify-content: center;
   background-color: #373b69;
@@ -9,28 +22,29 @@ export const MovieItem = styled.div`
   box-shadow: 5px 5px 9px -8px rgba(0, 0, 0, 0.53);
   -webkit-box-shadow: 5px 5px 9px -8px rgba(0, 0, 0, 0.53);
   -moz-box-shadow: 5px 5px 9px -8px rgba(0, 0, 0, 0.53);
-  &:hover {
-    & > div {
-      opacity: 0.7;
-    }
-  }
-`;
+}
 
-export const Poster = styled.img`
+.movie:hover {
+  & > div {
+    opacity: 0.7;
+  }
+}
+
+.image {
   width: 100%;
   height: 300px;
-`;
+}
 
-export const Meta = styled.div`
+.meta {
   height: 50px;
   padding: 15px;
   display: flex;
   justify-content: space-between;
   color: white;
-`;
+}
 
-export const Title = styled.p`
+.title {
   font-weight: bold;
   word-break: break-all;
   word-wrap: break-word;
-`;
+}

@@ -1,6 +1,4 @@
-import styled from 'styled-components';
-
-export const Detail = styled.div`
+.detail {
   position: absolute;
   top: 0;
   left: 0;
@@ -12,16 +10,16 @@ export const Detail = styled.div`
   background-color: black;
   color: white;
   transition: 250ms all ease-out;
-`;
+}
 
-export const Title = styled.p`
+.title {
   margin: 18px 0;
   font-weight: bold;
-`;
+}
 
-export const Overview = styled.p`
+.overview {
   display: -webkit-box;
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 5;
   overflow: hidden;
-`;
+}
