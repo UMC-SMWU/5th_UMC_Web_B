@@ -1,4 +1,4 @@
-.App {
+.movies {
   margin: 100px auto;
   display: grid;
   grid-template-columns: repeat(auto-fill, 200px);
