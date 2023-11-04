@@ -1,4 +1,6 @@
 .header {
+  display: flex;
+  align-items: center;
   padding: 20px;
   background-color: #032541;
 }
@@ -8,6 +10,7 @@
   display: flex;
   justify-content: space-between;
   margin-left: 250px;
+  margin-right: 25px;
 }
 
 .nav a {
