@@ -1,7 +1,10 @@
 import Movie from "./components/Movie/Movie";
 import MovieInfo from "./components/MovieInfo/MovieInfo";
 import movies from './components/movieDummy';
+<<<<<<< HEAD
+=======
 import "./index.css";
+>>>>>>> 723bab8dc7ccaf066fb9a1be7b1c93e443a563c9
 
 import styled from 'styled-components';
 
@@ -44,8 +47,11 @@ function App() {
         {
           movies.results.map((item)=> {
             return ( 
+<<<<<<< HEAD
+=======
               /*컴포넌트 태그를 연이어 쓰기 위해서는 반드시 div로 묶어주어야 함!
               ->안 그럼 root요소로 2개 이상의 태그가 들어가기 때문*/
+>>>>>>> 723bab8dc7ccaf066fb9a1be7b1c93e443a563c9
               <div className="movie_pair_movie">
                 <Movie
                   poster_path={item.poster_path}
