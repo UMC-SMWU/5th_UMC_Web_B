@@ -6,6 +6,7 @@
 .button {
   width: 78px;
   padding: 4px 0;
+  border: none;
   border-radius: 20px;
   cursor: pointer;
 }
