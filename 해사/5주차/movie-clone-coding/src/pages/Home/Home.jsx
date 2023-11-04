@@ -1,3 +1,5 @@
+import AdPage from '../../components/Ad/AdPage';
+
 export default function Home() {
-  return <div>Home</div>;
+  return <AdPage />;
 }
