@@ -2,7 +2,12 @@ import MovieDetail from '../MovieDetail/MovieDetail';
 import styles from './Movie.module.css';
 
 export default function Movie({
-  movie: { posterPath, title, voteAverage, overview },
+  movie: {
+    poster_path: posterPath,
+    title,
+    vote_average: voteAverage,
+    overview,
+  },
 }) {
   return (
     <div className={styles.movie}>
