@@ -1,0 +1,18 @@
+/* reset */
+html,
+body,
+div,
+section,
+p,
+button {
+  margin: 0;
+  padding: 0;
+}
+
+button {
+  outline: none;
+}
+
+a {
+  text-decoration: none;
+}
