@@ -1,5 +1,4 @@
 import React from "react";
-import "../../index.css";
 import * as H from './MovieInfo.style';
 
 const MovieInfo = (props) => {
