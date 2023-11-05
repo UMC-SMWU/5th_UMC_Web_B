@@ -1,8 +1,8 @@
 import React from 'react'
-import Adpage from "../Components/AdPage";
+import Ad from "../Components/Ad";
 
 export default function Home() {
   return (
-    <Adpage/>
+    <Ad/>
   )
 }

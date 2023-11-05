@@ -5,18 +5,10 @@ import styled from "styled-components";
 function Movie() {
   return (
     <div>
-    <DetailContainer>
-      {movies.results.map((movie) => (
-        <DetailOne key={movie.id} >
-         
-          <TitleDetail>{movie.title}</TitleDetail> 
-          <OverView>{movie.overview}</OverView>
-          
-          </DetailOne>
-      ))}
-    </DetailContainer>
+
     <CardContainer>        
       {movies.results.map((movie) => (
+        <>
         <CardOne key={movie.id} >
           
           <Poster
@@ -28,8 +20,15 @@ function Movie() {
           </Inform>
           
         </CardOne>
+                <DetailOne key={movie.id} >
+         
+                <TitleDetail>{movie.title}</TitleDetail> 
+                <OverView>{movie.overview}</OverView>
+                
+                </DetailOne>
+                </>
       ))}
-
+      
     </CardContainer>  
 
     </div>
@@ -37,8 +36,11 @@ function Movie() {
 }
 //------------호버됐을 때 올라오는 디테일부분-----------
 const DetailOne =styled.div` 
+position: absolute;
+top: 0;
+left: 0;
 width: calc(12.5% - 20px); 
-margin: 9.5px ; 
+ 
 max-height: 385px; 
 overflow-y: auto; 
 background-color: black;
@@ -71,10 +73,12 @@ padding-bottom: 30px;
 `
 //-----------원래 화면창에 뜨는 부분--------
 const CardContainer = styled.div`
+
   display: flex;
   flex-wrap: wrap; 
   background-color: rgb(79, 79, 109);
   padding: 10px 50px 10px 50px;
+  position: relative;
   `
 const CardOne = styled.div`
   width: calc(12.5% - 20px); 

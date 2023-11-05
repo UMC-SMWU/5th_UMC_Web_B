@@ -16,11 +16,10 @@ function App() {
       <Header/>
       
       <Routes>
-        <Route path="" element={<Home/>}/>
+        <Route path="/" element={<Home/>}/>
         <Route path="/Celebrity" element={<Celebrity/>} />
-        <Route path="/Home" element={<Home/>} />
         <Route path="/Movies" element={<Movies/>} />
-        <Route path="/NotFound" element={<NotFound/>} />
+        <Route path="/*" element={<NotFound/>} /> 
         <Route path="/TV" element={<TV/>} />
       </Routes>
     </BrowserRouter>
