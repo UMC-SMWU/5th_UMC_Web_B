@@ -1,0 +1,10 @@
+.container {
+  margin: 0 270px;
+  margin-top: 60px;
+  display: flex;
+}
+
+.poster {
+  width: 280px;
+  height: 420px;
+}
