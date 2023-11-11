@@ -17,7 +17,7 @@ const LoginControl = () => {
             {isLoggedIn?(
                 <div className='loginbox'>
                 <button onClick={handleLogoutClick}>로그아웃</button>
-                <div>가입을 축하합니다!</div>
+                <div>환영합니다!</div>
                 </div>
             ):(
                 <div className='loginbox'>
