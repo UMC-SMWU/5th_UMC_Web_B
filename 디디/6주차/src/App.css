@@ -1,0 +1,60 @@
+/*header css*/
+.header-container {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 999;
+  background-color: black;
+  margin: 0;
+}
+.header-content {
+  width: 100%;
+  max-width: 75rem;
+  height: 1.6rem;
+  padding: 0.75rem 1rem;
+  margin-left: 5rem;
+}
+.header-logo {
+  width: 30%;
+}
+.header-nav ul {
+  position: fixed;
+  top: 0.7rem;
+  left: 17rem;
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+}
+.header-nav ul li {
+  display: inline-block;
+  align-items: center;
+  padding: 0 2.5rem 0 0;
+}
+.header-font {
+  color: white;
+  text-decoration: none;
+}
+.loginButton {
+  margin: 0 1rem;
+  padding: 0.1rem 0.1rem;
+  border-radius: 10px;
+  height: 25px;
+  width: 80px;
+  border: none;
+  cursor: pointer;
+}
+.check {
+  position: relative;
+  top: 3rem;
+}
+
+/*광고*/
+.adImage {
+  top: 100;
+  left: 0;
+  width: 100%;
+}
+.adButton {
+  top: 240px;
+  cursor: pointer;
+}
