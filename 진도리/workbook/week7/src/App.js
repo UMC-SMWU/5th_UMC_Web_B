@@ -8,6 +8,8 @@ import Celebrity from "./pages/Celebrity";
 import TV from "./pages/TV";
 import NotFound from "./pages/NotFound";
 import MovieDetail from "./pages/MovieDetail";
+import TVDetail from "./pages/TVDetail";
+import Login from "./pages/Login"
 
 
 
@@ -24,6 +26,8 @@ function App() {
             <Route exact path="/tv" element={<TV/>} />
             <Route exact path="/*" element={<NotFound/>} />
             <Route path="/movies/:title" element={<MovieDetail/>}/>
+            <Route path="/tv/:title" element={<TVDetail/>}/>
+            <Route path="/login" element={<Login/>}/>
           </Routes>
       </BrowserRouter>
       </div>

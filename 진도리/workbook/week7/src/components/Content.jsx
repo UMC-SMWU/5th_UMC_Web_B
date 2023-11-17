@@ -1,9 +1,9 @@
 import React from "react";
 import "../index.css";
 
-const Movie = (props) => {
+const Content = (props) => {
     return (
-      <div className="moviecard">
+      <div className="contentcard">
         <div className="poster_img">
           <img src={`https://image.tmdb.org/t/p/w200${props.poster_path}`} 
           alt="poster"/>
@@ -20,4 +20,4 @@ const Movie = (props) => {
     )
   }
   
-  export default Movie
+  export default Content
