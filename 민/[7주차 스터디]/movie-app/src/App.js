@@ -22,7 +22,7 @@ function App() {
           <Route path="/celebrity" element={<Celebrity />} />
           <Route path="/contentDetail/:title" element={<ContentDetail />} />
           <Route path="/login" element={<Login />} />
-          <Route path="/*" element={<NotFound />} />
+          <Route path="*" element={<NotFound />} />
         </Routes>
       </Container>
     </BrowserRouter>
