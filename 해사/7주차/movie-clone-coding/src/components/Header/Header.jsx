@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import LoginControl from '../LoginControl/LoginControl';
+import LoginButton from '../../components/Button/LoginButton';
 import styles from './Header.module.css';
 
 export default function Header() {
@@ -17,7 +17,7 @@ export default function Header() {
         <Link to='/tv'>TV 프로그램</Link>
         <Link to='/person'>인물</Link>
       </nav>
-      <LoginControl />
+      <LoginButton />
     </header>
   );
 }

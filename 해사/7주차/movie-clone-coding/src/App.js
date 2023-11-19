@@ -2,6 +2,7 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Celebrity from './pages/Celebrity/Celebrity';
 import Header from './components/Header/Header';
 import Home from './pages/Home/Home';
+import Login from './pages/Login/Login';
 import MovieDetail from './pages/MovieDetail/MovieDetail';
 import Movies from './pages/Movies/Movies';
 import NotFound from './pages/NotFound/NotFound';
@@ -18,6 +19,7 @@ function App() {
         <Route path='/*' element={<NotFound />}></Route>
         <Route path='/tv' element={<TV />}></Route>
         <Route path='/movie/:title' element={<MovieDetail />}></Route>
+        <Route path='/login' element={<Login />}></Route>
       </Routes>
     </BrowserRouter>
   );
