@@ -1,32 +1,34 @@
 import styled from "styled-components";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useLocation } from "react-router-dom";
 
-function Movie({ movie }) {
+function Contents({ content }) {
   const navigate = useNavigate();
+  const { pathname } = useLocation();
+  const title = pathname === "/tv" ? content.name : content.title;
 
   const onClick = () => {
-    navigate(`/movie/${movie.title}`, {
-      state: { movie },
+    navigate(`/contentDetail/${title}`, {
+      state: content,
     });
   };
 
   return (
     <Container onClick={onClick}>
       <img
-        key={movie.id}
-        src={`https://image.tmdb.org/t/p/original/${movie.poster_path} `}
+        key={content.id}
+        src={`https://image.tmdb.org/t/p/original/${content.poster_path} `}
         height="230"
-        alt={movie.title}
+        alt={title}
       />
       <Title>
-        <span>{movie.title}</span>
-        <span>{movie.vote_average}</span>
+        <span>{title}</span>
+        <span>{content.vote_average}</span>
       </Title>
     </Container>
   );
 }
 
-export default Movie;
+export default Contents;
 
 const Container = styled.div`
   width: 150px;
