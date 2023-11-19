@@ -1,7 +1,7 @@
 import { useLocation, useParams } from 'react-router-dom';
-import styles from './MovieDetail.module.css';
+import styles from './VideoDetail.module.css';
 
-export default function MovieDetail() {
+export default function VideoDetail() {
   const { title } = useParams();
   const { state: posterPath } = useLocation();
 

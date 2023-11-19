@@ -1,3 +1,6 @@
+import { tvs } from '../../tvDummy';
+import Videos from '../../components/Videos/Videos';
+
 export default function TV() {
-  return <div>TV</div>;
+  return <Videos videos={tvs.results} />;
 }
