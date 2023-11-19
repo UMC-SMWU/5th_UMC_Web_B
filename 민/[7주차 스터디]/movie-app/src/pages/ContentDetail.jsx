@@ -1,10 +1,16 @@
 import React from "react";
 import { useParams, useLocation } from "react-router-dom";
 import styled from "styled-components";
+import NotFound from "./NotFound";
 
 function ContentDetail() {
   const { title } = useParams();
   const { state: content } = useLocation();
+
+  // url 임의로 잘못 입력 시 NotFound 렌더링
+  if (!content) {
+    return <NotFound />;
+  }
 
   return (
     <Container>
