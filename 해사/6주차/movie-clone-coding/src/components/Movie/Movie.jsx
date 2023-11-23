@@ -1,5 +1,4 @@
 import { useNavigate } from 'react-router-dom';
-import MovieDetail from '../MovieDetail/MovieDetail';
 import styles from './Movie.module.css';
 
 export default function Movie({
@@ -17,7 +16,6 @@ export default function Movie({
 
   return (
     <div className={styles.movie} onClick={handleClick}>
-      <MovieDetail title={title} overview={overview} />
       <img
         className={styles.image}
         src={`https://image.tmdb.org/t/p/w1280/${posterPath}`}

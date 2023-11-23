@@ -13,7 +13,7 @@ export default function Header() {
             alt='로고'
           />
         </Link>
-        <Link to='/movie'>영화</Link>
+        <Link to='/movies'>영화</Link>
         <Link to='/tv'>TV 프로그램</Link>
         <Link to='/person'>인물</Link>
       </nav>
