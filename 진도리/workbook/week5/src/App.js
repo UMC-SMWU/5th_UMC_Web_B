@@ -7,7 +7,6 @@ import Movies from "./pages/Movies";
 import Celebrity from "./pages/Celebrity";
 import TV from "./pages/TV";
 import NotFound from "./pages/NotFound";
-import MovieDetail from "./pages/MovieDetail";
 
 
 
@@ -22,8 +21,7 @@ function App() {
             <Route exact path="/movies" element={<Movies/>} />
             <Route exact path="/celebrity" element={<Celebrity/>} />
             <Route exact path="/tv" element={<TV/>} />
-            <Route exact path="/*" element={<NotFound/>} />
-            <Route path="/movies/:title" element={<MovieDetail/>}/>
+            <Route exact path="/notfound" element={<NotFound/>} />
           </Routes>
       </BrowserRouter>
       </div>
