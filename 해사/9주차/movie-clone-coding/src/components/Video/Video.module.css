@@ -1,0 +1,48 @@
+/* reset */
+
+html,
+body,
+section,
+div,
+p,
+img,
+span {
+  margin: 0;
+  padding: 0;
+}
+
+/* movie */
+
+.video {
+  position: relative;
+  justify-content: center;
+  background-color: #373b69;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  box-shadow: 5px 5px 9px -8px rgba(0, 0, 0, 0.53);
+  -webkit-box-shadow: 5px 5px 9px -8px rgba(0, 0, 0, 0.53);
+  -moz-box-shadow: 5px 5px 9px -8px rgba(0, 0, 0, 0.53);
+}
+
+.video:hover {
+  cursor: pointer;
+}
+
+.image {
+  width: 100%;
+  height: 375px;
+}
+
+.meta {
+  height: 50px;
+  padding: 15px;
+  display: flex;
+  justify-content: space-between;
+  color: white;
+}
+
+.title {
+  font-weight: bold;
+  word-break: break-all;
+  word-wrap: break-word;
+}

@@ -1,0 +1,9 @@
+.page {
+  margin: 0 270px;
+  margin-top: 60px;
+}
+
+.toMain {
+  color: red;
+  cursor: pointer;
+}
