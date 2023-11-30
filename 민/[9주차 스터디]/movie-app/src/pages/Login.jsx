@@ -1,11 +1,16 @@
+/* eslint-disable no-shadow */
+/* eslint-disable import/no-extraneous-dependencies */
+/* eslint-disable no-alert */
 import React from "react";
 import styled from "styled-components";
 import axios from "axios";
 import { connect } from "react-redux";
-import { setId, setPw, isLoading } from "./redux/action";
+import { useNavigate } from "react-router-dom";
+import { setId, setPw, isLoading, setToken } from "../redux/action";
 
-function App({ id, pw, loading, setId, setPw, isLoading }) {
-  const Login = async (e) => {
+function Login({ id, pw, loading, setId, setPw, isLoading, setToken }) {
+  const navigate = useNavigate(); // Use useHistory hook
+  const handleLogin = async (e) => {
     e.preventDefault();
 
     // input이 하나라도 비어있으면 alert
@@ -20,31 +25,38 @@ function App({ id, pw, loading, setId, setPw, isLoading }) {
     try {
       await axios
         .post("http://localhost:8000/user/login", {
-          id: id,
-          pw: pw,
+          id,
+          pw,
         })
         .then((res) => {
           // axios 요청 후 1.5초 뒤 -> 로그인 끝
           setTimeout(() => {
             isLoading(false);
-            alert("로그인 완료! " + res.data.result.username);
-            window.location.replace("/");
+            alert(`로그인 완료! ${res.data.result.username}`);
+
+            // 토큰 저장
+            const userToken = res.data.result.AccessToken;
+            setToken(userToken);
+            localStorage.setItem("token", userToken);
+
+            // 홈화면으로 이동
+            navigate("/");
           }, 1500);
         });
     } catch (err) {
       isLoading(false);
-      alert("로그인 실패! " + err.response.data.message);
+      alert(`로그인 실패! ${err.response.data.message}`);
     }
   };
 
   return (
     <Container>
-      <Box>
+      <DetailBox>
         <Title>
           <h1>Log In</h1>
-          <span>아이디와 비밀번호를 입력해주세요.</span>
+          <span>이메일과 비밀번호를 입력해주세요.</span>
         </Title>
-        <Form onSubmit={Login}>
+        <Form onSubmit={handleLogin}>
           <Label>
             아이디
             <Input
@@ -67,7 +79,7 @@ function App({ id, pw, loading, setId, setPw, isLoading }) {
             {loading ? "Loading..." : "로그인"}
           </Button>
         </Form>
-      </Box>
+      </DetailBox>
     </Container>
   );
 }
@@ -76,29 +88,30 @@ const mapStateToProps = (state) => ({
   id: state.id,
   pw: state.pw,
   loading: state.loading,
+  token: state.token,
 });
 
 const mapDispatchToProps = {
   setId,
   setPw,
   isLoading,
+  setToken,
 };
 
-export default connect(mapStateToProps, mapDispatchToProps)(App);
+export default connect(mapStateToProps, mapDispatchToProps)(Login);
 
 const Container = styled.div`
   width: 100vw;
-  height: 100vh;
+  height: calc(100vh - 64px); // header 높이 뺀 길이
 
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #efefef;
 `;
 
-const Box = styled.div`
-  width: 100%;
-  max-width: 500px;
+const DetailBox = styled.div`
+  width: 50%;
+  max-width: 700px;
   border-radius: 10px;
   padding: 30px 50px;
   display: flex;
@@ -122,14 +135,14 @@ const Title = styled.div`
 const Form = styled.form`
   display: flex;
   flex-direction: column;
-  margin: 20px 0px;
+  margin: 30px 0px;
 `;
 
 const Label = styled.label`
   display: flex;
   flex-direction: column;
   font-size: 14px;
-  margin: 10px 0px;
+  margin: 5px 0px;
 `;
 
 const Input = styled.input`
@@ -149,7 +162,7 @@ const Button = styled.button`
   background-color: ${(props) =>
     props.disabled ? "#c2c2c2" : "rgb(3, 37, 65)"};
   color: white;
-  margin-top: 20px;
+  margin: 10px 0px;
   cursor: ${(props) => (props.disabled ? "default" : "pointer")};
 
   &:hover {
