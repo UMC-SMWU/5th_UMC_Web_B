@@ -1,8 +1,12 @@
 import { Link } from 'react-router-dom';
-import LoginControl from '../LoginControl/LoginControl';
+import { useSelector } from 'react-redux';
+import LoginButton from '../../components/Button/LoginButton';
+import LogoutButton from '../Button/LogoutButton';
 import styles from './Header.module.css';
 
 export default function Header() {
+  const { name } = useSelector((state) => state.user);
+
   return (
     <header className={styles.header}>
       <nav className={styles.nav}>
@@ -17,7 +21,8 @@ export default function Header() {
         <Link to='/tv'>TV 프로그램</Link>
         <Link to='/person'>인물</Link>
       </nav>
-      <LoginControl />
+      {name ? <LogoutButton /> : <LoginButton />}
+      {name && <div className={styles.username}>{name}</div>}
     </header>
   );
 }

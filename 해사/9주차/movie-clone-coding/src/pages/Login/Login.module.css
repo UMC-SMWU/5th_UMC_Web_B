@@ -4,7 +4,7 @@
 }
 
 .title {
-  margin: 20px 0;
+  margin: 3rem 0;
 }
 
 .login {
@@ -13,8 +13,7 @@
 }
 
 .login label {
-  margin-bottom: 12px;
-  margin-top: 32px;
+  margin-bottom: 8px;
 }
 
 .input {
@@ -22,7 +21,7 @@
   outline: none;
   border: 1px solid rgb(230, 230, 230);
   border-radius: 8px;
-  /* margin-bottom: 20px; */
+  margin-bottom: 20px;
 }
 
 .input:focus {
@@ -30,7 +29,6 @@
 }
 
 .login button {
-  margin-top: 20px;
   padding: 16px 0;
   outline: none;
   border: none;
@@ -40,6 +38,13 @@
   cursor: pointer;
 }
 
-.login button:hover {
-  filter: brightness(1.2);
+.login button:disabled {
+  cursor: auto;
+  background-color: #807f7f;
+}
+
+.loading {
+  margin-top: 2rem;
+  font-size: 2rem;
+  text-align: center;
 }
