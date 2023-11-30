@@ -4,7 +4,7 @@
 }
 
 .title {
-  margin-bottom: 20px;
+  margin: 20px 0;
 }
 
 .login {
@@ -13,7 +13,8 @@
 }
 
 .login label {
-  margin-bottom: 8px;
+  margin-bottom: 12px;
+  margin-top: 32px;
 }
 
 .input {
@@ -21,7 +22,7 @@
   outline: none;
   border: 1px solid rgb(230, 230, 230);
   border-radius: 8px;
-  margin-bottom: 20px;
+  /* margin-bottom: 20px; */
 }
 
 .input:focus {
@@ -29,6 +30,7 @@
 }
 
 .login button {
+  margin-top: 20px;
   padding: 16px 0;
   outline: none;
   border: none;
