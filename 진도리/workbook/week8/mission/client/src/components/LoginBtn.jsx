@@ -32,7 +32,8 @@ const LoginBtn = () => {
       if (error.response) {
         if (error.response.status === 400) {
           alert('입력값이 비어 있습니다.');
-        } else if (error.response.status === 404) { //if, if 쓰면 좀 더 깔끔!
+        }
+        if (error.response.status === 404) {
           alert('아이디 또는 비밀번호가 틀렸습니다.');
         }
       } else {
