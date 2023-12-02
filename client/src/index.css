@@ -1,0 +1,82 @@
+@font-face {
+    font-family: 'TAEBAEKmilkyway';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2310@1.0/TAEBAEKmilkyway.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+body {
+    width: 100vw;
+    height: 100vh;
+}
+
+.app-container {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: 1fr 1fr 1fr;
+    padding: 20px 40px 20px 40px;
+}
+
+.contentcard{
+    width: 200px;
+    height: 400px;
+    background-color:rgb(49, 63, 141);
+    margin: 10px;
+    border-radius: 5px;
+    z-index: 1;
+    box-shadow: 0px 0px 20px #ffffff8a;
+}
+
+
+.poster_img img{
+    border-radius: 5px 5px 0px 0px;
+}
+
+.text {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    color: #ffffff;
+    margin: 10px;
+    margin-top: 20px;
+}
+
+.text_title {
+    font-size: 15px;
+}
+
+.text_rating {
+    font-size: 15px;
+}
+
+.contentDetail{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 50px;
+}
+
+.contentDetail_container{
+    width: 90vw;
+    height: 90vh;
+    background-color: rgb(49, 63, 141);
+    border-radius: 20px;
+    color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+}
+
+.contentDetail_title {
+    margin-left: 40px;
+    font-size: 28px;
+}
+
+.notfound {
+    width: 100vh;
+    height: 100vh;
+    padding-left: 10%;
+    padding-top: 3%;
+}

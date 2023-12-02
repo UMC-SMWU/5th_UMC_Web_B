@@ -1,0 +1,20 @@
+.ad {
+    width: 100vw;
+}
+
+.ad_button {
+    margin-top: 10px;
+    background-color: rgb(255, 255, 255);
+    border-radius: 5px;
+    border: 1px solid rgb(189, 189, 189);
+    color: rgb(173, 173, 173);
+}
+
+.loginbox {
+    display: flex;
+    flex-direction: row;
+}
+
+.loginbox button {
+    margin-right: 10px;
+}
