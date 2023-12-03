@@ -8,6 +8,7 @@ export default function Home() {
 
   useEffect(() => {
     const token = localStorage.getItem('token');
+    console.log(token);
     if (token) {
       axios
         .get('http://localhost:8000/user/payload', {
