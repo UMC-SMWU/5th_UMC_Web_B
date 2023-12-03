@@ -2,30 +2,35 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
 import styled from "styled-components";
-import { connect } from "react-redux";
 
-function LoginButton({ token }) {
+function LoginButton() {
   const navigate = useNavigate();
+
+  const handleLogout = () => {
+    localStorage.removeItem("token");
+    localStorage.removeItem("id");
+    window.location.replace("/");
+  };
 
   return (
     <Container>
-      {token === "" ? (
+      {localStorage.getItem("token") ? (
+        <>
+          <Button type="button" onClick={handleLogout}>
+            로그아웃
+          </Button>
+          <span>{localStorage.getItem("id")}</span>
+        </>
+      ) : (
         <Button type="button" onClick={() => navigate(`/login`)}>
           로그인
-        </Button>
-      ) : (
-        <Button type="button" onClick={() => window.location.replace("/")}>
-          로그아웃
         </Button>
       )}
     </Container>
   );
 }
 
-const mapStateToProps = (state) => ({
-  token: state.token,
-});
-export default connect(mapStateToProps)(LoginButton);
+export default LoginButton;
 
 const Container = styled.div`
   display: flex;

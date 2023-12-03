@@ -6,9 +6,9 @@ import styled from "styled-components";
 import axios from "axios";
 import { connect } from "react-redux";
 import { useNavigate } from "react-router-dom";
-import { setId, setPw, isLoading, setToken } from "../redux/action";
+import { setId, setPw, isLoading } from "../redux/action";
 
-function Login({ id, pw, loading, setId, setPw, isLoading, setToken }) {
+function Login({ id, pw, loading, setId, setPw, isLoading }) {
   const navigate = useNavigate(); // Use useHistory hook
   const handleLogin = async (e) => {
     e.preventDefault();
@@ -34,10 +34,9 @@ function Login({ id, pw, loading, setId, setPw, isLoading, setToken }) {
             isLoading(false);
             alert(`로그인 완료! ${res.data.result.username}`);
 
-            // 토큰 저장
-            const userToken = res.data.result.AccessToken;
-            setToken(userToken);
-            localStorage.setItem("token", userToken);
+            // id, token 저장
+            localStorage.setItem("id", res.data.result.userId);
+            localStorage.setItem("token", res.data.result.AccessToken);
 
             // 홈화면으로 이동
             navigate("/");
@@ -88,14 +87,12 @@ const mapStateToProps = (state) => ({
   id: state.id,
   pw: state.pw,
   loading: state.loading,
-  token: state.token,
 });
 
 const mapDispatchToProps = {
   setId,
   setPw,
   isLoading,
-  setToken,
 };
 
 export default connect(mapStateToProps, mapDispatchToProps)(Login);
