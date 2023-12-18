@@ -1,0 +1,40 @@
+.Container {
+  position: relative;
+  background-color: rgb(21, 5, 59);
+  color: white;
+  width: 180x;
+  height: 340px;
+  margin: 3px;
+  box-shadow:
+    0px 10px 13px -7px #000000,
+    5px 5px 15px 5px rgba(0, 0, 0, 0);
+}
+
+.Container img {
+  max-width: 100%;
+  max-height: 80%;
+  cursor: pointer;
+}
+.Container span {
+  margin: 10px;
+  font-size: 10px;
+}
+.Info {
+  display: flex;
+  justify-content: space-between;
+}
+.detailContainer {
+  position: relative;
+  top: 50px;
+  left: 50px;
+  width: 100%;
+}
+.detailContainer img {
+  height: 500px;
+}
+.detailContainer div {
+  position: absolute;
+  top: 20px;
+  left: 350px;
+  font-size: 20px;
+}
